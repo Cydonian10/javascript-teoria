@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body data-dark>
+    <header
+      class="h-14 flex gap-2 items-center justify-center text-2xl bg-amber-400 text-white font-bold"
+    >
+      Ejercicios del Dom
+      <button id="btnDark" class="active:scale-95">☀</button>
+    </header>
+
+    <nav
+      class="bg-black/50 h-screen z-10 fixed inset-0 transition-all -translate-x-[100%] menu-nav"
+    >
+      <ul class="flex flex-col justify-center h-screen">
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion1"
+            >Seccion 1</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion2"
+            >Seccion 2</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion3"
+            >Seccion 3</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion4"
+            >Seccion 4</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion5"
+            >Seccion 5</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion6"
+            >Filter Busqueda</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion7"
+            >Sorteo Digital</a
+          >
+        </li>
+        <li
+          class="h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+        >
+          <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion8"
+            >Slider</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Inicio Botones -->
+    <button
+      id="menu"
+      class="lg:hidden z-50 rounded-full bg-amber-400 w-16 h-16 fixed bottom-10 right-10"
+    ></button>
+    <button
+      id="scroll-top"
+      class="rounded-full bg-amber-400 w-16 h-16 fixed bottom-10 right-32 hidden"
+    >
+      &#11014;
+    </button>
+    <!-- Fin botones -->
+
+    <div class="flex">
+      <nav
+        id="nav-mobile"
+        class="hidden lg:block bg-black/50 h-screen transition-all w-[300px] sticky top-0 menu-nav"
+      >
+        <ul class="flex flex-col justify-center h-screen">
+          <li
+            data-scrool-spy
+            class="seccion1 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion1"
+              >Seccion 1</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion2 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion2"
+              >Seccion 2</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion3 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion3"
+              >Seccion 3</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion4 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion4"
+              >Seccion 4</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion5 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion5"
+              >Seccion 5</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion6 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion6"
+              >Filter Busqueda</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion7 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion7"
+              >Sorteo Digital</a
+            >
+          </li>
+          <li
+            data-scrool-spy
+            class="seccion8 h-20 flex items-center justify-center hover:bg-amber-400 w-full transition-all text-amber-300 hover:text-slate-500 font-bold text-2xl"
+          >
+            <a class="w-full text-center h-20 flex items-center justify-center" href="#seccion8"
+              >Slider</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="w-full">
+        <section data-scrool-spy id="seccion1" class="p-4 text-center h-[300px]">
+          <h2 class="text-center text-2xl font-bold">Reloj digital</h2>
+          <div class="flex flex-col items-center justify-center h-[300px]">
+            <h4 class="reloj"></h4>
+            <div>
+              <button
+                id="start-reloj"
+                class="bg-amber-400 text-white font-bold py-2 px-4 active:scale-95 disabled:bg-amber-100"
+              >
+                Iniciar Reloj
+              </button>
+              <button
+                id="stop-reloj"
+                class="bg-amber-400 text-white font-bold py-2 px-4 active:scale-95"
+              >
+                Parar Reloj
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion2" class="p-4 h-[400px]">
+          <h3 class="text-center text-2xl font-bold">Eventos del teclado</h3>
+          <!-- Contenedor del ball -->
+          <div class="h-[400px] flex flex-col justify-center">
+            <div class="contenedor-ball h-52 bg-slate-800">
+              <!-- ball -->
+              <div class="ball w-14 h-14 rounded-full bg-amber-400"></div>
+            </div>
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion3" class="p-4 h-[400px]">
+          <h2 class="text-center text-2xl font-bold">Cuenta Regresiva</h2>
+          <div class="flex flex-col justify-center h-[400px]">
+            <div class="text-center cuentaRegresiva">
+              <span>dias</span>
+              <span>horas</span>
+              <span>minutos</span>
+              <span>segundo</span>
+            </div>
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion4" class="p-4 h-[400px]">
+          <h2 class="text-center text-2xl font-bold">Reponsive con javascript</h2>
+          <div class="flex flex-col justify-center h-[400px]">
+            <!-- Cotenido -->
+            <div id="youtube" class="flex items-center justify-center"></div>
+            <div id="gmaps"></div>
+            <!-- Find contendio -->
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion5" class="p-4 h-[400px]">
+          <h2 class="text-center text-2xl font-bold">Deteccion de la conneccion</h2>
+          <div class="flex flex-col justify-center h-[400px]">
+            <!-- Cotenido -->
+            <div id="alertConnection"></div>
+
+            <!-- Find contendio -->
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion6" class="p-4 h-[500px]">
+          <h2 class="text-center text-2xl font-bold">Video Web Cam</h2>
+          <div class="flex flex-col justify-center h-[500px] w-full items-center">
+            <!-- Cotenido -->
+            <video id="webCam" controls></video>
+
+            <!-- Find contendio -->
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion7" class="p-4">
+          <h2 class="text-center text-2xl font-bold">Busqueda</h2>
+
+          <div class="text-center mt-10">
+            <input
+              type="search"
+              id="search"
+              placeholder="Search"
+              class="py-3 px-3 outline-none ring-1 ring-amber-400 bg-transparent rounded-sm"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center w-full items-center">
+            <!-- Cotenido -->
+            <section class="cards grid grid-cols-3 gap-3 mt-10">
+              <figure class="card transition-all">
+                <img class="rounded-sm" src="https://placeimg.com/200/200/tech" alt="tech" />
+                <figcaption class="bg-amber-400 py-3 px-2 text-slate-700 font-bold">
+                  Tech
+                </figcaption>
+              </figure>
+
+              <figure class="card transition-all">
+                <img class="rounded-sm" src="https://placeimg.com/200/200/animals" alt="animals" />
+                <figcaption class="bg-amber-400 py-3 px-2 text-slate-700 font-bold">
+                  animals
+                </figcaption>
+              </figure>
+
+              <figure class="card transition-all">
+                <img class="rounded-sm" src="https://placeimg.com/200/200/people" alt="people" />
+                <figcaption class="bg-amber-400 py-3 px-2 text-slate-700 font-bold">
+                  people
+                </figcaption>
+              </figure>
+
+              <figure class="card transition-all">
+                <img class="rounded-sm" src="https://placeimg.com/200/200/nature" alt="nature" />
+                <figcaption class="bg-amber-400 py-3 px-2 text-slate-700 font-bold">
+                  nature
+                </figcaption>
+              </figure>
+            </section>
+
+            <!-- Find contendio -->
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion8" class="p-4 h-[500px]">
+          <h2 class="text-center text-2xl font-bold">Sorteo Digital</h2>
+          <div class="flex flex-col justify-center h-[500px] w-full items-center">
+            <!-- Cotenido -->
+            <div class="text-center">
+              <ul class="players">
+                <li class="player">javascript</li>
+                <li class="player">php</li>
+                <li class="player">java</li>
+                <li class="player">c#</li>
+                <li class="player">python</li>
+                <li class="player">perl</li>
+              </ul>
+
+              <button
+                id="btn-sorteo"
+                class="bg-amber-500 text-slate-700 py-3 px-6 mt-3 active:scale-95 font-bold"
+              >
+                Elejir Ganador
+              </button>
+            </div>
+            <!-- Find contendio -->
+          </div>
+        </section>
+
+        <section data-scrool-spy id="seccion9" class="py-10">
+          <h2 class="text-center text-2xl font-bold">Slider</h2>
+
+          <div class="slider relative w-[80%] m-auto mt-10 text-center">
+            <div class="slider-slides relative h-[400px]">
+              <div
+                class="slider-slide flex justify-center absolute w-full h-full inset-0 transition-all opacity-0 invisible active"
+              >
+                <img
+                  class="rounded-sm object-cover w-full"
+                  src="https://placeimg.com/400/400/tech"
+                  alt="tech"
+                />
+              </div>
+              <div
+                class="slider-slide flex flex-col justify-center absolute w-full h-full inset-0 transition-all opacity-0 invisible"
+              >
+                <h4>Diapositiv 2</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, odio
+                  expedita. Id sapiente temporibus vitae velit impedit qui quibusdam natus est
+                  dignissimos pariatur recusandae nulla asperiores, architecto, molestiae laudantium
+                  vero!
+                </p>
+              </div>
+              <div
+                class="slider-slide flex justify-center absolute w-full h-full inset-0 transition-all opacity-0 invisible"
+              >
+                <img
+                  class="rounded-sm object-cover w-full"
+                  src="https://placeimg.com/400/400/nature"
+                  alt="tech"
+                />
+              </div>
+            </div>
+
+            <div class="slider-btns absolute top-[50%] flex justify-between w-full">
+              <button
+                class="prev w-14 h-14 border-slate-500 bg-white text-slate-700 transition-all hover:bg-slate-400 rounded-full flex items-center justify-center text-2xl font-bold"
+                href="#"
+              >
+                &laquo;
+              </button>
+              <button
+                class="next w-14 h-14 border-slate-500 bg-white text-slate-700 transition-all hover:bg-slate-400 rounded-full flex items-center justify-center text-2xl font-bold"
+                href="#"
+              >
+                &raquo;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section data-scrool id="seccion10" class="py-10">
+          <h2 class="text-center text-2xl font-bold">Formularios</h2>
+          <div class="flex flex-col items-center mt-10">
+            <form class="form">
+              <!-- <legend>Envianos tus comentarios</legend> -->
+              <div>
+                <input
+                  class="w-full py-3 px-2 ring-2 ring-amber-400 rounded-sm outline-none bg-transparent"
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Escribe tu nombre"
+                  title="El nombre es requerido"
+                  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                />
+              </div>
+
+              <div class="mt-5">
+                <textarea
+                  required
+                  class="py-3 px-2 ring-2 ring-amber-400 rounded-sm outline-none bg-transparent"
+                  name="comments"
+                  cols="30"
+                  rows="3"
+                  placeholder="Escribe tus comentarios"
+                  data-pattern="^.{1,255}$"
+                  title="Campo comentario es requerido"
+                ></textarea>
+              </div>
+              <div class="mt-10">
+                <button
+                  class="w-[100px] bg-amber-500 py-3 px-3 rounded-sm text-slate-800 font-bold"
+                >
+                  <span class="hidden">cargnado..</span>
+                  <span> Enviar</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section data-scrool id="seccion11" class="py-10">
+          <h2 class="text-center text-2xl font-bold">Crud Fecth</h2>
+          <div class="flex flex-col items-center mt-10">
+            <div class="grid grid-cols-2 gap-7">
+              <form class="crud-form">
+                <h2 class="text-xl text-center mb-4">Ver Santos</h2>
+                <div>
+                  <input
+                    class="w-full py-3 px-2 ring-2 ring-amber-400 rounded-sm outline-none bg-transparent"
+                    type="text"
+                    name="name"
+                    placeholder="Escribe tu nombre"
+                  />
+                </div>
+                <div class="mt-4">
+                  <input
+                    class="w-full py-3 px-2 ring-2 ring-amber-400 rounded-sm outline-none bg-transparent"
+                    type="text"
+                    name="constelacion"
+                    placeholder="Escribe la constelacion"
+                  />
+                </div>
+                <div class="mt-4">
+                  <button
+                    class="w-[100px] bg-amber-500 py-3 px-3 rounded-sm text-slate-800 font-bold"
+                  >
+                    <span class="hidden">cargnado..</span>
+                    <span> Enviar</span>
+                  </button>
+                </div>
+              </form>
+              <div>
+                <h2 class="text-xl text-center mb-4">Listado</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- <h3>Boom</h3>
+
+    <button id="abrir-btn">Abrir ventana</button>
+    <button id="cerrar-btn">Cerrar ventana</button>
+    <button id="imprimir-btn">Imprimir ventana</button>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3>Flujo de eventos</h3>
+
+    <section class="evento-flujo">
+      <div class="uno">
+        <div class="dos">
+          <div class="tres"></div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3>Eventos</h3>
+
+    <button onclick="holaMundo()">Evento Atributo Html</button>
+    <button id="alert">Evento Semantico</button>
+    <button id="remove-alert">Remmove Alert</button>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <p id="ques-es">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque consequatur sint
+      perspiciatis qui dolorem laborum, veniam odio obcaecati iusto repellat nobis, similique ipsam,
+      minima accusamus hic? Cupiditate, ipsa. Explicabo, veniam!
+    </p>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="#">Seccion 1</a></li>
+        <li><a href="#">Seccion 2</a></li>
+        <li><a href="#">Seccion 3</a></li>
+        <li><a href="#">Seccion 4</a></li>
+        <li><a href="#">Seccion 5</a></li>
+        <li><a href="#">Seccion 6</a></li>
+      </ul>
+    </nav>
+
+    <input type="text" name="nombre" placeholder="nombre" />
+
+    <a class="dom-link" style="display: block;" data-description="Document object model" href="http://localhost:5173/"
+      >Dom</a
+    >
+    <section class="cards">
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/tech" alt="tech" />
+        <figcaption>Tech</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/animals" alt="animals" />
+        <figcaption>Tech</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/people" alt="people" />
+        <figcaption>Tech</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/nature" alt="nature" />
+        <figcaption>Tech</figcaption>
+      </figure>
+    </section>
+
+    <template id="template-card">
+      <figure class="card">
+        <img />
+        <figcaption></figcaption>
+      </figure>
+    </template> -->
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

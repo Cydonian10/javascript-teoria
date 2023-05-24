@@ -1,0 +1,94 @@
+:root {
+ --yellow-color : #f7df1e;
+ --dark-color:  #222
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+.dark-mode {
+  color: #f7df1e !important;
+  background-color: #222;
+}
+
+
+.dark-mode-body {
+  background: #333;
+  color: #f7df1e;
+}
+
+.active {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.error-form {
+  @apply block mt-2 bg-red-400 text-white font-bold py-2 px-1 text-center
+}
+
+.hidden2 {
+  @apply hidden
+}
+/**
+* Eventos flujos
+*/
+
+/* .evento-flujo div {
+  padding: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.uno {
+  background-color: yellow;
+}
+
+.dos {
+  background-color: gold;
+}
+
+.tres {
+  background-color: lightcoral;
+}
+
+a {
+  text-decoration: none;
+  color: #f7df1e;
+}
+
+.cards {
+  border: 1px solid cyan;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: inline-block;
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+.card figcaption{
+  padding: 1rem;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rotate-135{
+  transform: rotate(135deg);
+}
+
+.opacity-80 {
+  opacity: .8;
+}
+
+.sepia {
+  filter: sepia(1);
+} */
